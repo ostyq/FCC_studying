@@ -1,21 +1,6 @@
 function translatePigLatin(str) {
-  let transctipted = '';
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
-  const vowelsPlace = [];
+  const firstVowel = str.search(/[aeoui]/);
 
-  str.split('').map(function(letter, index) {
-    if (vowels.indexOf(letter) >= 0) {
-      vowelsPlace.push(index);
-    }
-  });
-
-  if (vowelsPlace[0] === 0) {
-    transctipted = str + 'way';
-  } else {
-    transctipted =
-      str.substr(vowelsPlace[0]) + str.substr(0, vowelsPlace[0]) + 'ay';
-  }
-
-  return transctipted;
+  return (firstVowel === 0) ? str + 'way' : str.substr(firstVowel) + str.substr(0, firstVowel) + 'ay';
 }
 console.log(translatePigLatin('consonant'));
