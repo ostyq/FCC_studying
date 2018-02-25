@@ -1,17 +1,12 @@
 function pairElement(str) {
-  const DNAmatrix = {
+  const matrixDNA = {
     G: ['G', 'C'],
     C: ['C', 'G'],
     A: ['A', 'T'],
     T: ['T', 'A'],
   };
 
-  const result = [];
-  str.split('').map(function(letter) {
-    result.push(DNAmatrix[letter]);
-  });
-
-  return result;
+  return str.split('').map(letter => matrixDNA[letter]);
 }
 
 console.log(pairElement('GCG'));
