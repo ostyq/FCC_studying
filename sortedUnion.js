@@ -1,8 +1,5 @@
 function uniteUnique(arr) {
-  const args = [...arguments];
-  const united = args.reduce((coll, item) => {
-    return coll.concat(item);
-  });
+  const united = [].concat(...arguments);
 
   return united.filter((element, index) => united.indexOf(element) === index);
 }
