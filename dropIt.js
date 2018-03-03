@@ -1,7 +1,6 @@
 const dropElements = (arr, func) => {
-  const filteredArr = arr.filter(func);
-  const firstPlace = arr.indexOf(filteredArr[0]);
-  return filteredArr[0] != null ? arr.slice(firstPlace) : [];
+  const firstIndex = arr.findIndex(func);
+  return firstIndex >= 0 ? arr.slice(firstIndex) : [];
 };
 
 console.log(
