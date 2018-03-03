@@ -1,16 +1,7 @@
 const truthCheck = (collection, pre) => {
-  return collection.every(
-    element => element.hasOwnProperty(pre) && Boolean(element[pre])
-  );
+  return collection.every(obj => obj[pre]);
 };
 
 console.log(
-  truthCheck(
-    [
-      { name: 'Pete', onBoat: true },
-      { name: 'Repeat', onBoat: true, alias: 'Repete' },
-      { name: 'FastFoward', onBoat: true },
-    ],
-    'onBoat'
-  )
+  truthCheck([{ single: 'double' }, { single: undefined }], 'single')
 );
