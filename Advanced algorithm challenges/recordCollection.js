@@ -28,13 +28,12 @@ const updateRecords = (id, prop, value) => {
   } else if (prop !== 'tracks') {
     collection[id][prop] = value;
   } else {
-    if (!collection[id].hasOwnProperty('tracks')) {
-      collection[id][prop] = [];
-    }
-    collection[id][prop].push(value);
+    collection[id].hasOwnProperty('tracks')
+      ? collection[id][prop].push(value)
+      : (collection[id][prop] = [value]);
   }
   return collection;
 };
 
 // Alter values below to test your code
-console.log(updateRecords(2548, 'artist', ''));
+console.log(updateRecords(5439, "artist", "ABBA"));
