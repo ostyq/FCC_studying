@@ -36,4 +36,4 @@ const updateRecords = (id, prop, value) => {
 };
 
 // Alter values below to test your code
-console.log(updateRecords(5439, "artist", "ABBA"));
+console.log(updateRecords(5439, 'artist', 'ABBA'));
