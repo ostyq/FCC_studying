@@ -1,4 +1,4 @@
-function updateInventory(arr1, arr2) {
+const updateInventory = (arr1, arr2) => {
   const itemNames = arr1.map(i => i[1]);
 
   arr2.forEach((item) => {
@@ -10,7 +10,7 @@ function updateInventory(arr1, arr2) {
     }
   });
   return arr1.sort((a, b) => a[1] > b[1]);
-}
+};
 
 const curInv = [
   [21, 'Bowling Ball'],
